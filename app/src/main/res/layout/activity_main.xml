@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/btnShowToast"
-        android:text="btn display nameff"
+        android:text="btn display namea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
