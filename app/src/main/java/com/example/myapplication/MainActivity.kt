@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,10 +14,15 @@ class MainActivity : AppCompatActivity() {
 
         btnShowToast.setOnClickListener {
             Log.i("MainActivity", "btnShowToast Clicked")
-
             Toast.makeText(this, "btnShowToast Clicked", Toast.LENGTH_SHORT).show()
-
         }
 
+        btnSendMessageToNextActivity.setOnClickListener {
+            var msg: String = etUserMsg.text.toString()
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+
+            var intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
